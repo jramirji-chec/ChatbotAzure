@@ -19,6 +19,7 @@ const { buscarPorCedula } = require("./Leer_archivos"); // Importar la función 
 const csvFilePath = path.join(__dirname, "reportes.csv");
 const usersData = {}; // Almacén temporal de datos de usuarios
 
+// prueba
 // FUNCION PARA ELIMINAR ACENTOS
 function eliminarAcentos(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
