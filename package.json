@@ -20,6 +20,7 @@
         "cache-manager": "5.2.4",
         "csv-parser": "^3.2.0",
         "dotenv": "^16.4.7",
+        "express": "^5.1.0",
         "microsoft-cognitiveservices-speech-sdk": "^1.43.1",
         "mongodb": "^6.15.0",
         "mssql": "^11.0.1",

@@ -13,6 +13,15 @@ const { buscarPorNombre } = require("./Leer_archivos"); // Importar la función 
 const { buscarPorCedula } = require("./Leer_archivos"); // Importar la función desde Leer_archivos.js
 const sharedData = {};
 
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3001;
+
+// async function main() {
+//     await app.listen(PORT);
+//     console.log('Server on port', PORT);
+// }
 
 // const usersData = {}; // Almacén temporal de datos de usuarios
 // const csvFilePath = "reportes.csv"; // Ruta del archivo CSV
@@ -540,6 +549,8 @@ const main = async () => {
     const adapterDB = new MockAdapter()  //flujoValidarRemitente,flujoValidarDestino
     const adapterFlow = createFlow([flowPrincipal,flujoNombrePropio,flujoValidarOtro,flujoValidarDestino,flujoInicial,flowWelcome, flowVoice,flujoSeleccionMultiplesCoincidencias,flujoSeleccionMultiplesCoincidencias2,flujoSeleccionManualOBusqueda,Nuevapersona])
     const adapterProvider = createProvider(BaileysProvider)
+    await app.listen(PORT);
+    console.log('Server on port', PORT);
 
     createBot({
         flow: adapterFlow,
